@@ -29,3 +29,15 @@
     text-align: left;
     line-height: 1.5em;
 }
+
+.recipe button {
+    color: #555;
+    background: #e2e2e2;
+    font-size: 0.7em;
+    text-align: center;
+    width: 120px;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 20px auto 0;
+    border: none;
+}
