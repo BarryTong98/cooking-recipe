@@ -1,7 +1,7 @@
 import './Home.css'
 
 import React from 'react';
-import RecipeList from "../component/RecipeList";
+import RecipeList from "../../component/RecipeList";
 import {useFetch} from "../../hooks/useFetch";
 
 function Home() {

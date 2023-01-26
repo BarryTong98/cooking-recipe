@@ -4,12 +4,15 @@ import Home from "./pages/home/Home";
 import Create from "./pages/create/Create";
 import Search from "./pages/search/Search";
 import Recipe from "./pages/recipe/Recipe";
-import Navbar from "./pages/component/Navbar";
-import ThemeSelector from "./pages/component/ThemeSelector";
+import Navbar from "./component/Navbar";
+import ThemeSelector from "./component/ThemeSelector";
+import {useTheme} from "./hooks/useTheme";
 
 function App() {
+    const {mode}  = useTheme()
+
     return (
-        <div className="App">
+        <div className={`App ${mode}`}>
             <BrowserRouter>
                 <Navbar/>
                 <ThemeSelector />

@@ -3,7 +3,7 @@ import './Search.css'
 import React from 'react';
 import {useLocation} from "react-router-dom";
 import {useFetch} from "../../hooks/useFetch";
-import RecipeList from "../component/RecipeList";
+import RecipeList from "../../component/RecipeList";
 
 function Search() {
     const queryString = useLocation().search

@@ -3,7 +3,7 @@ import './Navbar.css'
 import React from 'react';
 import {Link} from "react-router-dom";
 import SearchBar from "./SearchBar";
-import {useTheme} from "../../hooks/useTheme";
+import {useTheme} from "../hooks/useTheme";
 
 function Navbar() {
     const {color} = useTheme()

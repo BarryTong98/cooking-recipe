@@ -7,6 +7,7 @@
     padding: 40px;
     box-sizing: border-box;
 }
+
 .recipe ul {
     /*display: flex;将每一个ul在同一行显示*/
     display: flex;
@@ -14,17 +15,21 @@
     justify-content: center;
     margin-top: 0;
 }
+
 .recipe li {
     list-style-type: none;
     margin-right: 10px;
     color: #777;
 }
+
 .recipe li::after {
     content: ",";
 }
+
 .recipe li:last-child::after {
     content: ".";
 }
+
 .method {
     text-align: left;
     line-height: 1.5em;
@@ -40,4 +45,10 @@
     border-radius: 4px;
     margin: 20px auto 0;
     border: none;
+}
+
+/* dark mode */
+.recipe.dark {
+    background: #555;
+    color: #e4e4e4;
 }
