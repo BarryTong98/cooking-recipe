@@ -1,7 +1,7 @@
 import './Create.css'
 
 import React, {useEffect, useRef, useState} from 'react';
-import {useFetch} from "../../hook/useFetch";
+import {useFetch} from "../../hooks/useFetch";
 import {useNavigate} from "react-router-dom";
 
 function Create() {
@@ -11,7 +11,7 @@ function Create() {
     const [newIngredient, setNewIngredient] = useState('');
     const [ingredients, setIngredients] = useState([]);
     const ingredientInput = useRef(null)
-    const {data, error, postData} = useFetch('http://localhost:3000/recipes', 'POST')
+    const {data, postData} = useFetch('http://localhost:3000/recipes', 'POST')
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {

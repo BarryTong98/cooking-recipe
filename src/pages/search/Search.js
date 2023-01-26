@@ -1,8 +1,8 @@
 import './Search.css'
 
 import React from 'react';
-import {Link, useLocation} from "react-router-dom";
-import {useFetch} from "../../hook/useFetch";
+import {useLocation} from "react-router-dom";
+import {useFetch} from "../../hooks/useFetch";
 import RecipeList from "../component/RecipeList";
 
 function Search() {
