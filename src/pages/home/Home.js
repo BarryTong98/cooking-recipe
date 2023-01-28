@@ -12,8 +12,9 @@ function Home() {
 
     useEffect(() => {
         setIsPending(true)
-
-        projectFirestore.collection('recipes').get().then((snapshot) => {
+        // snapshot listener
+        // every time there is a change inside of collection, it will send a snapshot event and send that to us
+        const unsub = projectFirestore.collection('recipes').onSnapshot((snapshot) => {
             if (snapshot.empty) {
                 setError('No recipes to load')
                 setIsPending(false)
@@ -27,10 +28,12 @@ function Home() {
                 setData(results)
                 setIsPending(false)
             }
-        }).catch(err => {
+        }, (err) => {
             setError(err.message)
             setIsPending(false)
         })
+        //clean up function for onSnapshot
+        return () => unsub()
     }, [])
 
     return (
