@@ -23,19 +23,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Feature
 1. FireBase Firestore Database
-   ![Firestore.png](public/imgs/Firestore.png)
+   ![Firestore.png](public/imgs/firestore.png)
 2. Recipe HomePage
-   ![Recipe HomePage.png](public/imgs/Recipe HomePage.png)
+   ![Recipe HomePage.png](public/imgs/recipe_homePage.png)
 3. Create Recipe
-   ![Create Recipe.png](public/imgs/Create Recipe.png)
+   ![Create Recipe.png](public/imgs/create_recipe.png)
 4. Recipe Detail Page
-   ![Recipe Detail Page.png](public/imgs/Recipe Detail Page.png)
+   ![Recipe Detail Page.png](public/imgs/recipe_detail _page.png)
 5. Delete Recipe
-   ![Delete Recipe.png](public/imgs/Delete Recipe.png)
+   ![Delete Recipe.png](public/imgs/delete_recipe.png)
 6. Search Results Page
-   ![Search.png](public/imgs/Search.jpg)
+   ![Search.png](public/imgs/search.jpg)
 7. Theme Selector
-   ![Theme Selector.png](public/imgs/Theme Selector.png)
+   ![Theme Selector.png](public/imgs/theme_selector.png)
 8. Dark/Light Mode
-   ![dark&light.png](public/imgs/dark&light mode.png)
+   ![dark&light.png](public/imgs/dark&light_mode.png)
 
