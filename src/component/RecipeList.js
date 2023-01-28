@@ -1,6 +1,6 @@
 import React from 'react';
 import './RecipeList.css'
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useTheme} from "../hooks/useTheme";
 import TrashBin from '../assets/delete.svg'
 import {projectFirestore} from "../firebase/config";
@@ -14,8 +14,8 @@ function RecipeList({recipes}) {
             </div>
         );
     }
-    const handleClick =  (id) => {
-         projectFirestore.collection('recipes').doc(id).delete()
+    const handleClick = (id) => {
+        projectFirestore.collection('recipes').doc(id).delete()
     }
 
     return (
@@ -33,6 +33,7 @@ function RecipeList({recipes}) {
                             onClick={() => {
                                 handleClick(recipe.id)
                             }}
+                            alt={"delete button"}
                         />
                     </div>
                 </div>

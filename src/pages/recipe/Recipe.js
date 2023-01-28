@@ -1,7 +1,6 @@
 import './Recipe.css'
 
-import {useNavigate, useParams} from "react-router-dom";
-import {useFetch} from "../../hooks/useFetch";
+import {useParams} from "react-router-dom";
 import {useTheme} from "../../hooks/useTheme";
 import {useEffect, useState} from "react";
 import {projectFirestore} from "../../firebase/config";
@@ -19,7 +18,7 @@ function Recipe() {
             if (doc.exists) {
                 setIsPending(false)
                 setRecipe(doc.data())
-            } else{
+            } else {
                 setIsPending(false)
                 setError('Could not find that recipe')
             }
