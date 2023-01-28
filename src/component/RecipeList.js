@@ -1,7 +1,9 @@
 import React from 'react';
 import './RecipeList.css'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useTheme} from "../hooks/useTheme";
+import TrashBin from '../assets/delete.svg'
+import {projectFirestore} from "../firebase/config";
 
 function RecipeList({recipes}) {
     const {mode} = useTheme()
@@ -11,6 +13,9 @@ function RecipeList({recipes}) {
                 No recipes to load...
             </div>
         );
+    }
+    const handleClick =  (id) => {
+         projectFirestore.collection('recipes').doc(id).delete()
     }
 
     return (
@@ -22,6 +27,13 @@ function RecipeList({recipes}) {
                     <div>
                         {recipe.method.substring(0, 100)}...
                         <Link to={`/recipes/${recipe.id}`}>Cook This</Link>
+                        <img
+                            className={"delete"}
+                            src={TrashBin}
+                            onClick={() => {
+                                handleClick(recipe.id)
+                            }}
+                        />
                     </div>
                 </div>
             ))}
